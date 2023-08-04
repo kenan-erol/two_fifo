@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug  4 14:18:31 2023
+# Process ID: 24468
+# Current directory: /home/kenan/Documents/two_fifo
+# Command line: vivado
+# Log file: /home/kenan/Documents/two_fifo/vivado.log
+# Journal file: /home/kenan/Documents/two_fifo/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project two_fifo /home/kenan/Documents/two_fifo/two_fifo -part xc7z020clg400-1
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+create_bd_design "zynq"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property name axi_dma_conv [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_sg_length_width {26} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {8}] [get_bd_cells axi_dma_conv]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_conv/S_AXI_LITE} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_conv/S_AXI_LITE]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_USE_S_AXI_HP2 {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_conv/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_HP0} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_conv/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP2} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP2]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins axi_dma_conv/M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_dma_conv/S_AXIS_S2MM]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn]
+validate_bd_design
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axi_dma_conv/m_axi_sg_aclk]
+validate_bd_design
+save_bd_design
+write_project_tcl -use_bd_files {/home/kenan/Documents/two_fifo/onefifo.tcl}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_1
+endgroup
+set_property location {2 664 -393} [get_bd_cells axis_data_fifo_1]
+delete_bd_objs [get_bd_cells axis_data_fifo_1]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_1
+endgroup
+save_bd_design
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_1/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins axi_dma_conv/S_AXIS_S2MM]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axis_data_fifo_1/s_axis_aclk]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+open_bd_design {/home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd}
+file mkdir /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new
+close [ open /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v w ]
+add_files /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v] -no_script -reset -force -quiet
+remove_files  /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v
+update_compile_order -fileset sources_1

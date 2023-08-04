@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug  4 16:14:01 2023
+# Process ID: 30261
+# Current directory: /home/kenan/Documents/two_fifo
+# Command line: vivado
+# Log file: /home/kenan/Documents/two_fifo/vivado.log
+# Journal file: /home/kenan/Documents/two_fifo/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/kenan/Documents/Tunable-TDC/burn/z1/base/base/base.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kenan/Documents/Tunable-TDC/burn/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:14 . Memory (MB): peak = 6265.168 ; gain = 288.578 ; free physical = 821 ; free virtual = 5351
+update_compile_order -fileset sources_1
+open_bd_design {/home/kenan/Documents/Tunable-TDC/burn/z1/base/base/base.srcs/sources_1/bd/base/base.bd}
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_convolution
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_resizer
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_1
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_0
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_1
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_2
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_3
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - fclkPorReset
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - idDesign
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - idGpio
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axis_clock_converter:1.1 - axisClockConverter
+Adding cell -- xilinx.com:ip:xlslice:1.0 - clk1Reset
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - clk1ResetCtrl
+Adding cell -- xilinx.com:ip:xlslice:1.0 - clk2Reset
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - clk2ResetCtrl
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clkWiz
+Adding cell -- cse.ucsd.edu:ip:carrycross:2.0 - crossClockCarry
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - dataDma
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - dataFifo
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - intrCtrl
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - irqConcat
+Adding cell -- user.org:user:launchpad:1.0 - launchpad
+Adding cell -- UCSD:hlsip:phase:1.0 - phaseBump
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - protocolConverter
+Adding cell -- UCSD:hlsip:pulsegen:1.0 - pulsegen
+Adding cell -- colindrewes.com:colindrewes:pulsegen_v:1.0 - pulsegen_sync_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - resetGpio
+WARNING: [BD 41-1731] Type mismatch between connected pins: /chain0/s_axi_aclk(clk) and /chain0/clkWiz/psclk(undef)
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- UCSD:hlsip:phase:1.0 - phase_bump_target_sensor
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - target_sensor_clock
+WARNING: [BD 41-1731] Type mismatch between connected pins: /bumper/ap_clk(clk) and /bumper/target_sensor_clock/psclk(undef)
+Successfully read diagram <base> from BD file </home/kenan/Documents/Tunable-TDC/burn/z1/base/base/base.srcs/sources_1/bd/base/base.bd>

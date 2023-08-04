@@ -1,0 +1,206 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Aug  4 14:18:31 2023
+# Process ID: 24468
+# Current directory: /home/kenan/Documents/two_fifo
+# Command line: vivado
+# Log file: /home/kenan/Documents/two_fifo/vivado.log
+# Journal file: /home/kenan/Documents/two_fifo/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project two_fifo /home/kenan/Documents/two_fifo/two_fifo -part xc7z020clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.2/data/ip'.
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+create_bd_design "zynq"
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+create_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6207.551 ; gain = 58.199 ; free physical = 2745 ; free virtual = 6863
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property name axi_dma_conv [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_sg_length_width {26} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {8}] [get_bd_cells axi_dma_conv]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_conv/S_AXI_LITE} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_conv/S_AXI_LITE]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+</axi_dma_conv/S_AXI_LITE/Reg> is being mapped into </processing_system7_0/Data> at <0x40400000 [ 64K ]>
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_USE_S_AXI_HP2 {1}] [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_conv/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_HP0} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </axi_dma_conv/Data_MM2S> at <0x00000000 [ 512M ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_conv/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP2} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP2]
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </axi_dma_conv/Data_S2MM> at <0x00000000 [ 512M ]>
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins axi_dma_conv/M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_dma_conv/S_AXIS_S2MM]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn]
+validate_bd_design
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/axi_dma_conv/m_axi_sg_aclk
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axi_dma_conv/m_axi_sg_aclk]
+validate_bd_design
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+save_bd_design
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ui/bd_e1a0d542.ui> 
+write_project_tcl -use_bd_files {/home/kenan/Documents/two_fifo/onefifo.tcl}
+INFO: [Vivado-projutils-8] Tcl script 'onefifo.tcl' generated in output directory '/home/kenan/Documents/two_fifo'
+
+INFO: [Vivado-projutils-15] Please note that by default, the file path for the project source files were set wth respect to the 'origin_dir' variable in the
+ generated script. When this script is executed from the output directory, these source files will be referenced with respect to this 'origin_dir' path value.
+ In case this script was later moved to a different directory, the 'origin_dir' value must be set manually in the script with the path
+ relative to the new output directory to make sure that the source files are referenced correctly from the original project. You can also set the
+ 'origin_dir' automatically by setting the 'origin_dir_loc' variable in the tcl shell before sourcing this generated script. The 'origin_dir_loc'
+ variable should be set to the path relative to the new output directory. Alternatively, if you are sourcing the script from the Vivado command line,
+ then set the origin dir using '-tclargs --origin_dir <path>'. For example, 'vivado -mode tcl -source onefifo.tcl -tclargs --origin_dir ".."
+
+WARNING: [Vivado-projutils-10] Found source(s) that were local or imported into the project. If this project is being source controlled, then
+ please ensure that the project source(s) are also part of this source controlled data. The list of these local source(s) can be found in the generated script
+ under the header section.
+
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_1
+endgroup
+set_property location {2 664 -393} [get_bd_cells axis_data_fifo_1]
+delete_bd_objs [get_bd_cells axis_data_fifo_1]
+save_bd_design
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ui/bd_e1a0d542.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+VHDL Output written to : /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v
+VHDL Output written to : /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/sim/zynq.v
+VHDL Output written to : /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_conv .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/hw_handoff/zynq_axi_smc_0.hwh
+Generated Block Design Tcl file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/hw_handoff/zynq_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/synth/zynq_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_1_0/bd_0/hw_handoff/zynq_axi_smc_1_0.hwh
+Generated Block Design Tcl file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_1_0/bd_0/hw_handoff/zynq_axi_smc_1_0_bd.tcl
+Generated Hardware Definition File /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_1_0/bd_0/synth/zynq_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hw_handoff/zynq.hwh
+Generated Block Design Tcl file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hw_handoff/zynq_bd.tcl
+Generated Hardware Definition File /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.hwdef
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_1
+endgroup
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+save_bd_design
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ui/bd_e1a0d542.ui> 
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_1/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins axi_dma_conv/S_AXIS_S2MM]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axis_data_fifo_1/s_axis_aclk]
+connect_bd_net [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn]
+save_bd_design
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ui/bd_e1a0d542.ui> 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Wrote  : </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+VHDL Output written to : /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v
+VHDL Output written to : /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/sim/zynq.v
+VHDL Output written to : /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_conv .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/hw_handoff/zynq_axi_smc_0.hwh
+Generated Block Design Tcl file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/hw_handoff/zynq_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/synth/zynq_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_1_0/bd_0/hw_handoff/zynq_axi_smc_1_0.hwh
+Generated Block Design Tcl file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_1_0/bd_0/hw_handoff/zynq_axi_smc_1_0_bd.tcl
+Generated Hardware Definition File /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_1_0/bd_0/synth/zynq_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hw_handoff/zynq.hwh
+Generated Block Design Tcl file /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hw_handoff/zynq_bd.tcl
+Generated Hardware Definition File /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.hwdef
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_bd_design {/home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd}
+file mkdir /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new
+close [ open /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v w ]
+add_files /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v] -no_script -reset -force -quiet
+remove_files  /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/new/zynq_wrapper.v
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  4 16:31:54 2023...
