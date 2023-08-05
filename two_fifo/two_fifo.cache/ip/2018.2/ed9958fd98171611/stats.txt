@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sat Aug 05 23:27:49 UTC 2023
+VLNV: xilinx.com:ip:smartconnect:1.0
+SynthRuntime: 75

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Aug  5 19:30:10 2023
+# Process ID: 14032
+# Current directory: /home/kenan/Documents/two_fifo/two_fifo/two_fifo.runs/impl_1
+# Command line: vivado -log zynq_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source zynq_wrapper.tcl -notrace
+# Log file: /home/kenan/Documents/two_fifo/two_fifo/two_fifo.runs/impl_1/zynq_wrapper.vdi
+# Journal file: /home/kenan/Documents/two_fifo/two_fifo/two_fifo.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source zynq_wrapper.tcl -notrace

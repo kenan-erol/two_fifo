@@ -1,0 +1,566 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1329
+License: Customer
+
+Current time: 	Fri Aug 04 17:02:48 EDT 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Ubuntu
+OS Version: 5.4.0-86-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1920x1200
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 241 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/tools/Xilinx/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/tools/Xilinx/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	root
+User home directory: /root
+User working directory: /home/kenan/Documents/two_fifo
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/kenan/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/kenan/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /home/kenan/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/kenan/Documents/two_fifo/vivado.log
+Vivado journal file location: 	/home/kenan/Documents/two_fifo/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1329-caslab-wkst6
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2018.2
+XILINX_SDK: /tools/Xilinx/Vivado/SDK
+XILINX_VIVADO: /tools/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	195 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 855 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 80 MB (+81030kb) [00:00:06]
+// [Engine Memory]: 853 MB (+742590kb) [00:00:06]
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/kenan/Documents/two_fifo/two_fifo/two_fifo.xpr", 0); // q (O, ck)
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: /home/kenan/Documents/two_fifo/two_fifo/two_fifo.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/kenan/Documents/two_fifo/two_fifo/two_fifo.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 897 MB. GUI used memory: 36 MB. Current time: 8/4/23 5:02:50 PM EDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 917 MB (+23108kb) [00:00:12]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,014 MB (+53553kb) [00:00:13]
+// Tcl Message: open_project /home/kenan/Documents/two_fifo/two_fifo/two_fifo.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.2/data/ip'. 
+// Project name: two_fifo; location: /home/kenan/Documents/two_fifo/two_fifo; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 6167.332 ; gain = 167.383 ; free physical = 1355 ; free virtual = 5910 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,167 MB (+106759kb) [00:00:16]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (zynq.bd) elapsed time: 0.2s
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zynq (zynq.bd)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zynq (zynq.bd)]", 1, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (ck): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// 'Z' command handler elapsed time: 4 seconds
+dismissDialog("Create HDL Wrapper"); // a (ck)
+// Tcl Message: make_wrapper -files [get_files /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd] -top 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,241 MB (+16112kb) [00:00:40]
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 46 MB. Current time: 8/4/23 5:03:25 PM EDT
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zynq_wrapper (zynq_wrapper.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zynq_wrapper (zynq_wrapper.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+// 'cv' command handler elapsed time: 5 seconds
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (ck):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd} 
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_conv Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_1 Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_0 Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_1 Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <zynq> from BD file </home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// 'bA' command handler elapsed time: 4 seconds
+dismissDialog("Open Block Design"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,191 MB. GUI used memory: 51 MB. Current time: 8/4/23 5:04:10 PM EDT
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 85 MB (+1893kb) [00:01:44]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Aug  4 17:04:26 2023] Launched impl_1... Run output will be captured here: /home/kenan/Documents/two_fifo/two_fifo/two_fifo.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// [GUI Memory]: 91 MB (+1186kb) [00:01:50]
+// TclEventType: RUN_FAILED
+// [GUI Memory]: 108 MB (+12979kb) [00:02:01]
+// [GUI Memory]: 136 MB (+23440kb) [00:02:06]
+// TclEventType: RUN_FAILED
+// [GUI Memory]: 152 MB (+9820kb) [00:02:09]
+// [Engine Memory]: 1,356 MB (+55574kb) [00:02:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,356 MB. GUI used memory: 70 MB. Current time: 8/4/23 5:04:55 PM EDT
+// TclEventType: RUN_FAILED
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// Elapsed time: 36 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aE (Q, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zynq_wrapper (zynq_wrapper.v)]", 1, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// C (ck): Settings: addNotify
+// [GUI Memory]: 175 MB (+16889kb) [00:02:28]
+dismissDialog("Settings"); // C (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// [GUI Memory]: 204 MB (+20631kb) [00:02:31]
+// [GUI Memory]: 215 MB (+838kb) [00:04:31]
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// Elapsed time: 139 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+// [GUI Memory]: 239 MB (+14328kb) [00:04:53]
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// [GUI Memory]: 255 MB (+3510kb) [00:04:58]
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// Elapsed time: 183 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "zynq_wrapper.v", 2); // k (j, ck)
+// [GUI Memory]: 269 MB (+1047kb) [00:11:27]
+// Elapsed time: 298 seconds
+selectCodeEditor("zynq_wrapper.v", 840, 147); // ce (w, ck)
+// [GUI Memory]: 283 MB (+784kb) [00:19:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 77 MB. Current time: 8/4/23 5:34:55 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 6:04:55 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 6:34:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 7:04:55 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 7:34:55 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 8:04:55 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 8:34:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 9:04:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 9:34:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 10:04:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 10:34:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 11:04:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/4/23 11:34:56 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 12:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 12:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 1:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 1:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 2:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 2:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 3:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 3:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 4:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 4:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 5:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 5:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 6:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 72 MB. Current time: 8/5/23 6:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 7:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 7:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 8:04:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 8:34:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 9:04:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 9:34:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 10:04:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 10:34:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 11:04:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 11:34:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 12:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 12:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 1:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 1:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 2:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 2:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 3:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 3:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 4:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 4:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 5:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 5:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 6:04:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 6:34:57 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 71 MB. Current time: 8/5/23 7:04:57 PM EDT
+// Elapsed time: 93682 seconds
+selectCodeEditor("zynq_wrapper.v", 893, 62); // ce (w, ck)
+// Elapsed time: 108 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aE (Q, ck)
+// Elapsed time: 52 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ck) - Node
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, zynq, zynq_axi_smc_1_0, zynq_axi_smc_1_0_synth_1, [Coretcl 2-155] Invalid project file name 'Vivado'. File must have a valid Vivado project extension (.xpr/.ppr).. ]", 15, false); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, zynq, zynq_axi_smc_1_0, zynq_axi_smc_1_0_synth_1, [Coretcl 2-155] Invalid project file name 'Vivado'. File must have a valid Vivado project extension (.xpr/.ppr).. ]", 15, false, false, false, false, false, true); // ah (O, ck) - Double Click
+// Elapsed time: 173 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_axi_smc_1_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_axi_dma_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_axis_data_fifo_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_axi_smc_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_processing_system7_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_rst_ps7_0_100M_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_auto_pc_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run zynq_axis_data_fifo_1_0_synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 754ms to process. Increasing delay to 2000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 2098ms to process. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,380 MB. GUI used memory: 80 MB. Current time: 8/5/23 7:26:38 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 424ms to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 798 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bx (ck):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,442 MB. GUI used memory: 85 MB. Current time: 8/5/23 7:36:08 PM EDT
+// [Engine Memory]: 1,460 MB (+38245kb) [26:33:27]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,674 MB. GUI used memory: 86 MB. Current time: 8/5/23 7:36:27 PM EDT
+// [Engine Memory]: 1,682 MB (+155830kb) [26:33:47]
+// [Engine Memory]: 1,782 MB (+17086kb) [26:33:57]
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,108 MB. GUI used memory: 85 MB. Current time: 8/5/23 7:36:47 PM EDT
+// [Engine Memory]: 2,108 MB (+248801kb) [26:34:06]
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 2,264 MB (+52697kb) [26:34:07]
+// Xgd.load filename: /tools/Xilinx/Vivado/2018.2/data/parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.2s
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.2 INFO: [Device 21-403] Loading part xc7z020clg400-1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.68 . Memory (MB): peak = 7091.867 ; gain = 0.000 ; free physical = 1041 ; free virtual = 5187 
+// Tcl Message: Restored from archive | CPU: 0.680000 secs | Memory: 9.614479 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.69 . Memory (MB): peak = 7091.867 ; gain = 0.000 ; free physical = 1041 ; free virtual = 5187 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 49 instances were transformed.   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 49 instances  
+// ExpRunCommands.openImplResults elapsed time: 47.3s
+// Device view-level: 0.0
+// TclEventType: DRC_ADDED
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 7264.242 ; gain = 806.738 ; free physical = 951 ; free virtual = 5106 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dP' command handler elapsed time: 52 seconds
+// Elapsed time: 52 seconds
+dismissDialog("Open Implemented Design"); // bx (ck)
+// Elapsed time: 50 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL, "Write Tcl..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL
+// aM (ck): Write Project to Tcl: addNotify
+// Elapsed time: 20 seconds
+setText(PAResourceTtoZ.WriteProjectTclDialog_PROJECT_TCL_FILE, "two_nonhier.tcl"); // al (aN, aM)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aM)
+// Tcl Command: 'write_project_tcl -use_bd_files {/home/kenan/Documents/two_fifo/two_nonhier.tcl}'
+// 'p' command handler elapsed time: 20 seconds
+dismissDialog("Write Project to Tcl"); // aM (ck)
+// bx (ck):  Write Project to Tcl : addNotify
+// Tcl Message: write_project_tcl -use_bd_files {/home/kenan/Documents/two_fifo/two_nonhier.tcl} 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message:  
+// Tcl Message:  
+// Tcl Message: write_project_tcl: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7264.242 ; gain = 0.000 ; free physical = 903 ; free virtual = 5055 
+dismissDialog("Write Project to Tcl"); // bx (ck)
+selectButton("PAResourceTtoZ.WriteProjectTclDialog_SUCCESSFULLY_GENERATED_FILE_WOULD_YOU_Yes", "Yes"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,289 MB. GUI used memory: 148 MB. Current time: 8/5/23 7:38:28 PM EDT
+// Elapsed time: 37 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aE (Q, ck)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aE (Q, ck)
