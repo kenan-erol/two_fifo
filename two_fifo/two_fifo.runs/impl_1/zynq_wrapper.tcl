@@ -65,19 +65,20 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param board.repoPaths C:XilinxVivadoÅ8.2dataoardsoard_filespynq-z2A.0
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/kenan/Documents/two_fifo/two_fifo/two_fifo.cache/wt [current_project]
-  set_property parent.project_path /home/kenan/Documents/two_fifo/two_fifo/two_fifo.xpr [current_project]
-  set_property ip_output_repo /home/kenan/Documents/two_fifo/two_fifo/two_fifo.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.cache/wt [current_project]
+  set_property parent.project_path C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.xpr [current_project]
+  set_property ip_output_repo C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /home/kenan/Documents/two_fifo/two_fifo/two_fifo.runs/synth_1/zynq_wrapper.dcp
+  add_files -quiet C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/zynq_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd
+  add_files C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/zynq.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top zynq_wrapper -part xc7z020clg400-1

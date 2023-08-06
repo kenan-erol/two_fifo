@@ -2,30 +2,28 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Aug  6 11:48:27 2023
-# Process ID: 11768
+# Start of session at: Sun Aug  6 19:01:02 2023
+# Process ID: 8648
 # Current directory: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4468 C:\Users\kge7\Documents\GitHub\two_fifo\two_fifo\two_fifo.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12928 C:\Users\kge7\Documents\GitHub\two_fifo\two_fifo\two_fifo.xpr
 # Log file: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/vivado.log
 # Journal file: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo\vivado.jou
 #-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/kge7/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 start_gui
 open_project C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.xpr
+WARNING: [Board 49-91] Board repository path 'C:XilinxVivadoÅ8.2dataoardsoard_filespynq-z2A.0' does not exist, it will not be used to search board files.
 INFO: [Project 1-313] Project file moved from '/home/kenan/Documents/two_fifo/two_fifo' since last save.
 Scanning sources...
 Finished scanning sources
-CRITICAL WARNING: [Board 49-67] The board_part definition was not found for tul.com.tw:pynq-z2:part0:1.0. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'zynq.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-zynq_processing_system7_0_0
-zynq_axi_smc_0
-zynq_rst_ps7_0_100M_0
-zynq_axi_smc_1_0
-
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 948.977 ; gain = 212.898
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 940.551 ; gain = 178.645
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Sun Aug  6 11:50:53 2023...
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Aug  6 19:01:59 2023] Launched synth_1...
+Run output will be captured here: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/runme.log
+[Sun Aug  6 19:01:59 2023] Launched impl_1...
+Run output will be captured here: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/impl_1/runme.log

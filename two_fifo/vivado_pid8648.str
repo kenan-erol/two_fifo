@@ -1,0 +1,145 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 8648
+License: Customer
+
+Current time: 	Sun Aug 06 19:01:14 EDT 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 249 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	kge7
+User home directory: C:/Users/kge7
+User working directory: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/kge7/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/kge7/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/kge7/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/vivado.log
+Vivado journal file location: 	C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/vivado.jou
+Engine tmp dir: 	C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/.Xil/Vivado-8648-MWPF3JPJR2
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	196 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 610 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: Sourcing tcl script 'C:/Users/kge7/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl' 
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 61 MB (+61765kb) [00:00:06]
+// [Engine Memory]: 510 MB (+383289kb) [00:00:06]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\kge7\Documents\GitHub\two_fifo\two_fifo\two_fifo.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.xpr 
+// [GUI Memory]: 68 MB (+3825kb) [00:00:07]
+// [Engine Memory]: 555 MB (+20405kb) [00:00:07]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 644 MB. GUI used memory: 32 MB. Current time: 8/6/23 7:01:16 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 644 MB (+64360kb) [00:00:12]
+// [Engine Memory]: 685 MB (+9169kb) [00:00:13]
+// [GUI Memory]: 73 MB (+1127kb) [00:00:14]
+// [Engine Memory]: 732 MB (+13227kb) [00:00:15]
+// [GUI Memory]: 85 MB (+9162kb) [00:00:15]
+// Tcl Message: open_project C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/kenan/Documents/two_fifo/two_fifo' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 940.551 ; gain = 178.645 
+// Project name: two_fifo; location: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 95 MB (+6157kb) [00:00:24]
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sun Aug  6 19:01:59 2023] Launched synth_1... Run output will be captured here: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/runme.log [Sun Aug  6 19:01:59 2023] Launched impl_1... Run output will be captured here: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// [GUI Memory]: 102 MB (+2202kb) [00:01:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 756 MB. GUI used memory: 56 MB. Current time: 8/6/23 7:02:27 PM EDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 205 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_WRITE_CONFIG_MEMORY_FILE, "Generate Memory Configuration File"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_WRITE_CONFIG_MEMORY_FILE
+// aU (ck): Write Memory Configuration File: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,396 MB. GUI used memory: 59 MB. Current time: 8/6/23 7:05:28 PM EDT
+// [Engine Memory]: 1,396 MB (+658214kb) [00:04:24]
+// 'aH' command handler elapsed time: 11 seconds
+// Elapsed time: 11 seconds
+dismissDialog("Write Memory Configuration File"); // aU (ck)
