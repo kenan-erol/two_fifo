@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Fri Aug  4 16:11:25 2023
-//Host        : caslab-wkst6 running 64-bit Ubuntu 18.04.6 LTS
+//Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+//Date        : Thu Aug 17 12:54:07 2023
+//Host        : MWPF3JPJR2 running 64-bit major release  (build 9200)
 //Command     : generate_target zynq.bd
 //Design      : zynq
 //Purpose     : IP block netlist
@@ -534,17 +534,6 @@ module zynq
         .m_axi_s2mm_wready(axi_dma_conv_M_AXI_S2MM_WREADY),
         .m_axi_s2mm_wstrb(axi_dma_conv_M_AXI_S2MM_WSTRB),
         .m_axi_s2mm_wvalid(axi_dma_conv_M_AXI_S2MM_WVALID),
-        .m_axi_sg_aclk(processing_system7_0_FCLK_CLK0),
-        .m_axi_sg_arready(1'b0),
-        .m_axi_sg_awready(1'b0),
-        .m_axi_sg_bresp({1'b0,1'b0}),
-        .m_axi_sg_bvalid(1'b0),
-        .m_axi_sg_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_sg_rlast(1'b0),
-        .m_axi_sg_rresp({1'b0,1'b0}),
-        .m_axi_sg_rvalid(1'b0),
-        .m_axi_sg_wready(1'b0),
-        .m_axis_mm2s_cntrl_tready(1'b1),
         .m_axis_mm2s_tdata(axi_dma_conv_M_AXIS_MM2S_TDATA),
         .m_axis_mm2s_tkeep(axi_dma_conv_M_AXIS_MM2S_TKEEP),
         .m_axis_mm2s_tlast(axi_dma_conv_M_AXIS_MM2S_TLAST),
@@ -567,10 +556,6 @@ module zynq
         .s_axi_lite_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_sts_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_s2mm_sts_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_sts_tlast(1'b0),
-        .s_axis_s2mm_sts_tvalid(1'b0),
         .s_axis_s2mm_tdata(axis_data_fifo_1_M_AXIS_TDATA),
         .s_axis_s2mm_tkeep(axis_data_fifo_1_M_AXIS_TKEEP),
         .s_axis_s2mm_tlast(axis_data_fifo_1_M_AXIS_TLAST),

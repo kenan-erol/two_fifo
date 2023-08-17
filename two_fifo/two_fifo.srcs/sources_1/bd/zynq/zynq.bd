@@ -708,6 +708,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="axi_dma" spirit:vendor="xilinx.com" spirit:version="7.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zynq_axi_dma_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="c_include_sg">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="c_sg_length_width">26</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="c_m_axi_mm2s_data_width">64</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="c_m_axis_mm2s_tdata_width">64</spirit:configurableElementValue>
@@ -813,11 +814,8 @@
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="axi_dma_conv" spirit:portRef="s_axi_lite_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_dma_conv" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_smc" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP0_ACLK"/>
@@ -825,8 +823,10 @@
         <spirit:internalPortReference spirit:componentRef="axi_smc_1" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP2_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axis_data_fifo_0" spirit:portRef="s_axis_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_dma_conv" spirit:portRef="m_axi_sg_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axis_data_fifo_1" spirit:portRef="s_axis_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -836,13 +836,13 @@
       <spirit:adHocConnection>
         <spirit:name>rst_ps7_0_100M_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_dma_conv" spirit:portRef="axi_resetn"/>
-        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_smc" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_smc_1" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_data_fifo_0" spirit:portRef="s_axis_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_data_fifo_1" spirit:portRef="s_axis_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_ps7_0_100M_interconnect_aresetn</spirit:name>
@@ -1357,14 +1357,6 @@
         <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>M_AXI_SG</spirit:name>
-        <spirit:master>
-          <spirit:addressSpaceRef spirit:addressSpaceRef="Data_SG"/>
-        </spirit:master>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
         <spirit:name>M_AXI_MM2S</spirit:name>
         <spirit:master>
           <spirit:addressSpaceRef spirit:addressSpaceRef="Data_MM2S"/>
@@ -1394,12 +1386,6 @@
       </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>Data_SG</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments/>
-      </spirit:addressSpace>
       <spirit:addressSpace>
         <spirit:name>Data_MM2S</spirit:name>
         <spirit:range>4G</spirit:range>

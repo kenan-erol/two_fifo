@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Aug  6 19:02:03 2023
-# Process ID: 5948
+# Start of session at: Thu Aug 17 12:57:17 2023
+# Process ID: 9640
 # Current directory: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1
 # Command line: vivado.exe -log zynq_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zynq_wrapper.tcl
 # Log file: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/zynq_wrapper.vds
@@ -20,38 +20,38 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7252 
+INFO: Helper process launched with PID 13708 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 473.422 ; gain = 104.531
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 473.398 ; gain = 103.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'zynq_wrapper' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'zynq' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:303]
-INFO: [Synth 8-6157] synthesizing module 'zynq_axi_dma_0_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_dma_0_0' (1#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_dma_conv' of module 'zynq_axi_dma_0_0' requires 106 connections, but only 74 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:504]
-INFO: [Synth 8-6157] synthesizing module 'zynq_axi_smc_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_smc_0' (2#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zynq_axi_smc_1_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axi_smc_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_smc_1_0' (3#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axi_smc_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zynq_axis_data_fifo_0_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_axis_data_fifo_0_0' (4#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axis_data_fifo_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_data_fifo_0' of module 'zynq_axis_data_fifo_0_0' requires 15 connections, but only 12 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:651]
-INFO: [Synth 8-6157] synthesizing module 'zynq_axis_data_fifo_1_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axis_data_fifo_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_axis_data_fifo_1_0' (5#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_axis_data_fifo_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_data_fifo_1' of module 'zynq_axis_data_fifo_1_0' requires 15 connections, but only 12 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:664]
-INFO: [Synth 8-6157] synthesizing module 'zynq_processing_system7_0_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_processing_system7_0_0' (6#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'zynq_processing_system7_0_0' requires 155 connections, but only 132 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:677]
-INFO: [Synth 8-6157] synthesizing module 'zynq_ps7_0_axi_periph_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:881]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axi_dma_0_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_dma_0_0' (1#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_dma_conv' of module 'zynq_axi_dma_0_0' requires 64 connections, but only 59 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:504]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axi_smc_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_smc_0' (2#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axi_smc_1_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_smc_1_0' (3#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axis_data_fifo_0_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axis_data_fifo_0_0' (4#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axis_data_fifo_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_data_fifo_0' of module 'zynq_axis_data_fifo_0_0' requires 15 connections, but only 12 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:636]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axis_data_fifo_1_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axis_data_fifo_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axis_data_fifo_1_0' (5#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_axis_data_fifo_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_data_fifo_1' of module 'zynq_axis_data_fifo_1_0' requires 15 connections, but only 12 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:649]
+INFO: [Synth 8-6157] synthesizing module 'zynq_processing_system7_0_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_processing_system7_0_0' (6#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'zynq_processing_system7_0_0' requires 155 connections, but only 132 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:662]
+INFO: [Synth 8-6157] synthesizing module 'zynq_ps7_0_axi_periph_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:866]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_15A5WQ8' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:12]
-INFO: [Synth 8-6157] synthesizing module 'zynq_auto_pc_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_auto_pc_0' (7#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zynq_auto_pc_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_auto_pc_0' (7#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_auto_pc_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_pc' of module 'zynq_auto_pc_0' requires 59 connections, but only 56 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:243]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_15A5WQ8' (8#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_ps7_0_axi_periph_0' (9#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:881]
-INFO: [Synth 8-6157] synthesizing module 'zynq_rst_ps7_0_100M_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_rst_ps7_0_100M_0' (10#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-5948-MWPF3JPJR2/realtime/zynq_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'zynq_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:871]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_ps7_0_axi_periph_0' (9#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:866]
+INFO: [Synth 8-6157] synthesizing module 'zynq_rst_ps7_0_100M_0' [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_rst_ps7_0_100M_0' (10#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/.Xil/Vivado-9640-MWPF3JPJR2/realtime/zynq_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'zynq_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:856]
 INFO: [Synth 8-6155] done synthesizing module 'zynq' (11#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/synth/zynq.v:303]
 INFO: [Synth 8-6155] done synthesizing module 'zynq_wrapper' (12#1) [C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_15A5WQ8 has unconnected port M_ACLK
@@ -59,7 +59,7 @@ WARNING: [Synth 8-3331] design s00_couplers_imp_15A5WQ8 has unconnected port M_A
 WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port ACLK
 WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 528.793 ; gain = 159.902
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 527.895 ; gain = 158.273
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,10 +72,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 528.793 ; gain = 159.902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 527.895 ; gain = 158.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 528.793 ; gain = 159.902
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 527.895 ; gain = 158.273
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -105,18 +105,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 837.773 ; gain = 0.066
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 838.148 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'zynq_i/axis_data_fifo_0' at clock pin 's_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'zynq_i/axis_data_fifo_1' at clock pin 's_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 839.336 ; gain = 470.445
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 839.453 ; gain = 469.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 839.336 ; gain = 470.445
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 839.453 ; gain = 469.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -392,10 +392,10 @@ Applied set_property DONT_TOUCH = true for zynq_i/axis_data_fifo_0. (constraint 
 Applied set_property DONT_TOUCH = true for zynq_i/axis_data_fifo_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zynq_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 839.336 ; gain = 470.445
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 839.453 ; gain = 469.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 839.336 ; gain = 470.445
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 839.453 ; gain = 469.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -435,7 +435,7 @@ WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port ARES
 WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 839.336 ; gain = 470.445
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 839.453 ; gain = 469.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -449,13 +449,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'zynq_i/processing_system7_0/FCLK_CLK0' to pin 'zynq_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 869.406 ; gain = 500.516
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 871.797 ; gain = 502.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 869.703 ; gain = 500.812
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 872.020 ; gain = 502.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -467,7 +467,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -491,7 +491,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -504,7 +504,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -516,25 +516,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -572,17 +572,17 @@ Report Instance Areas:
 +------+---------------------+-------------------------+------+
 |      |Instance             |Module                   |Cells |
 +------+---------------------+-------------------------+------+
-|1     |top                  |                         |  1718|
-|2     |  zynq_i             |zynq                     |  1718|
+|1     |top                  |                         |  1531|
+|2     |  zynq_i             |zynq                     |  1531|
 |3     |    ps7_0_axi_periph |zynq_ps7_0_axi_periph_0  |   177|
 |4     |      s00_couplers   |s00_couplers_imp_15A5WQ8 |   177|
 +------+---------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.832 ; gain = 501.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 873.219 ; gain = 503.598
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 870.855 ; gain = 191.422
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 870.855 ; gain = 501.965
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 873.242 ; gain = 192.062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 873.242 ; gain = 503.621
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -592,9 +592,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 38 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 900.871 ; gain = 543.398
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 898.176 ; gain = 540.082
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/synth_1/zynq_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file zynq_wrapper_utilization_synth.rpt -pb zynq_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 900.871 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Aug  6 19:02:36 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 898.176 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 17 12:57:53 2023...

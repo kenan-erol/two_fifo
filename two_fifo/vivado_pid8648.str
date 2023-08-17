@@ -143,3 +143,70 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
 // 'aH' command handler elapsed time: 11 seconds
 // Elapsed time: 11 seconds
 dismissDialog("Write Memory Configuration File"); // aU (ck)
+// [GUI Memory]: 107 MB (+172kb) [00:26:58]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 59 MB. Current time: 8/6/23 7:35:32 PM EDT
+// [GUI Memory]: 113 MB (+115kb) [00:50:00]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 53 MB. Current time: 8/6/23 8:05:32 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/6/23 10:27:29 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/6/23 11:31:37 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 12:32:24 AM EDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3599301 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 1:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 2:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/7/23 3:32:23 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 4:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 5:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 6:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 53 MB. Current time: 8/7/23 7:30:04 AM EDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2364971 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 8:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 9:32:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 10:32:24 AM EDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 21516810 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/7/23 4:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 5:31:00 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 6:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 8:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 9:31:00 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 10:31:00 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/7/23 11:31:01 PM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3599767 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 12:52:52 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 1:31:00 AM EDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3600023 ms. Increasing delay to 6000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 2:31:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 3:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 4:31:01 AM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3599726 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/8/23 5:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 7:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 8:31:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 10:31:01 AM EDT
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 205ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/8/23 11:32:46 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 1:31:00 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 2:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 3:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/8/23 4:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/8/23 5:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/8/23 6:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 7:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 8:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 9:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 10:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/8/23 11:31:00 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 12:31:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 1:31:01 AM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3599550 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 2:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 3:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 4:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 5:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 6:31:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 7:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/9/23 8:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/9/23 9:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 10:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/9/23 11:31:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 54 MB. Current time: 8/9/23 12:31:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 55 MB. Current time: 8/10/23 5:51:21 AM EDT
