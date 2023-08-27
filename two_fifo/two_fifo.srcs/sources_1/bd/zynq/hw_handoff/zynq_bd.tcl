@@ -194,19 +194,23 @@ proc create_hier_cell_dma_block_0 { parentCell nameHier } {
   # Create instance: axis_data_fifo_1, and set properties
   set axis_data_fifo_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_1 ]
 
+  # Create instance: axisadd_0, and set properties
+  set axisadd_0 [ create_bd_cell -type ip -vlnv yale.edu:user:axisadd:1.0 axisadd_0 ]
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_dma_conv_M_AXIS_MM2S [get_bd_intf_pins axi_dma_conv/M_AXIS_MM2S] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
   connect_bd_intf_net -intf_net axi_dma_conv_M_AXI_MM2S [get_bd_intf_pins axi_dma_conv/M_AXI_MM2S] [get_bd_intf_pins axi_smc/S00_AXI]
   connect_bd_intf_net -intf_net axi_dma_conv_M_AXI_S2MM [get_bd_intf_pins axi_dma_conv/M_AXI_S2MM] [get_bd_intf_pins axi_smc_1/S00_AXI]
   connect_bd_intf_net -intf_net axi_smc_1_M00_AXI [get_bd_intf_pins M00_AXI1] [get_bd_intf_pins axi_smc_1/M00_AXI]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins M00_AXI] [get_bd_intf_pins axi_smc/M00_AXI]
-  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_1/S_AXIS]
+  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axisadd_0/S00_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axi_dma_conv/S_AXIS_S2MM] [get_bd_intf_pins axis_data_fifo_1/M_AXIS]
+  connect_bd_intf_net -intf_net axisadd_0_M00_AXIS [get_bd_intf_pins axis_data_fifo_1/S_AXIS] [get_bd_intf_pins axisadd_0/M00_AXIS]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins S_AXI_LITE] [get_bd_intf_pins axi_dma_conv/S_AXI_LITE]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins s_axi_lite_aclk] [get_bd_pins axi_dma_conv/m_axi_mm2s_aclk] [get_bd_pins axi_dma_conv/m_axi_s2mm_aclk] [get_bd_pins axi_dma_conv/s_axi_lite_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_resetn] [get_bd_pins axi_dma_conv/axi_resetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins s_axi_lite_aclk] [get_bd_pins axi_dma_conv/m_axi_mm2s_aclk] [get_bd_pins axi_dma_conv/m_axi_s2mm_aclk] [get_bd_pins axi_dma_conv/s_axi_lite_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axisadd_0/m00_axis_aclk] [get_bd_pins axisadd_0/s00_axi_aclk] [get_bd_pins axisadd_0/s00_axis_aclk]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_resetn] [get_bd_pins axi_dma_conv/axi_resetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axisadd_0/m00_axis_aresetn] [get_bd_pins axisadd_0/s00_axi_aresetn] [get_bd_pins axisadd_0/s00_axis_aresetn]
 
   # Restore current instance
   current_bd_instance $oldCurInst

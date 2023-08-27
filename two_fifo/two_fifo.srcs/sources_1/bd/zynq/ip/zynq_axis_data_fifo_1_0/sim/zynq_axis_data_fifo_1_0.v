@@ -59,12 +59,12 @@ module zynq_axis_data_fifo_1_0 (
   s_axis_tvalid,
   s_axis_tready,
   s_axis_tdata,
-  s_axis_tkeep,
+  s_axis_tstrb,
   s_axis_tlast,
   m_axis_tvalid,
   m_axis_tready,
   m_axis_tdata,
-  m_axis_tkeep,
+  m_axis_tstrb,
   m_axis_tlast,
   axis_data_count,
   axis_wr_data_count,
@@ -82,10 +82,10 @@ input wire s_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *)
 output wire s_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *)
-input wire [63 : 0] s_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TKEEP" *)
-input wire [7 : 0] s_axis_tkeep;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zynq_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *)
+input wire [31 : 0] s_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TSTRB" *)
+input wire [3 : 0] s_axis_tstrb;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zynq_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *)
 input wire s_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
@@ -93,10 +93,10 @@ output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
 input wire m_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-output wire [63 : 0] m_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TKEEP" *)
-output wire [7 : 0] m_axis_tkeep;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zynq_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *)
+output wire [31 : 0] m_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TSTRB" *)
+output wire [3 : 0] m_axis_tstrb;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zynq_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
 output wire [31 : 0] axis_data_count;
@@ -105,11 +105,11 @@ output wire [31 : 0] axis_rd_data_count;
 
   axis_data_fifo_v1_1_18_axis_data_fifo #(
     .C_FAMILY("zynq"),
-    .C_AXIS_TDATA_WIDTH(64),
+    .C_AXIS_TDATA_WIDTH(32),
     .C_AXIS_TID_WIDTH(1),
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
-    .C_AXIS_SIGNAL_SET('B00000000000000000000000000011011),
+    .C_AXIS_SIGNAL_SET('B00000000000000000000000000010111),
     .C_FIFO_DEPTH(1024),
     .C_FIFO_MODE(1),
     .C_IS_ACLK_ASYNC(0),
@@ -123,8 +123,8 @@ output wire [31 : 0] axis_rd_data_count;
     .s_axis_tvalid(s_axis_tvalid),
     .s_axis_tready(s_axis_tready),
     .s_axis_tdata(s_axis_tdata),
-    .s_axis_tstrb(8'HFF),
-    .s_axis_tkeep(s_axis_tkeep),
+    .s_axis_tstrb(s_axis_tstrb),
+    .s_axis_tkeep(4'HF),
     .s_axis_tlast(s_axis_tlast),
     .s_axis_tid(1'H0),
     .s_axis_tdest(1'H0),
@@ -134,8 +134,8 @@ output wire [31 : 0] axis_rd_data_count;
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tready(m_axis_tready),
     .m_axis_tdata(m_axis_tdata),
-    .m_axis_tstrb(),
-    .m_axis_tkeep(m_axis_tkeep),
+    .m_axis_tstrb(m_axis_tstrb),
+    .m_axis_tkeep(),
     .m_axis_tlast(m_axis_tlast),
     .m_axis_tid(),
     .m_axis_tdest(),

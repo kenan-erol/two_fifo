@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Aug 17 14:43:07 2023
+//Date        : Mon Aug 21 10:48:01 2023
 //Host        : MWPF3JPJR2 running 64-bit major release  (build 9200)
 //Command     : generate_target zynq.bd
 //Design      : zynq
@@ -142,10 +142,10 @@ module dma_block_0_imp_N8YKXF
   wire axi_dma_conv_M_AXI_S2MM_BREADY;
   wire [1:0]axi_dma_conv_M_AXI_S2MM_BRESP;
   wire axi_dma_conv_M_AXI_S2MM_BVALID;
-  wire [63:0]axi_dma_conv_M_AXI_S2MM_WDATA;
+  wire [31:0]axi_dma_conv_M_AXI_S2MM_WDATA;
   wire axi_dma_conv_M_AXI_S2MM_WLAST;
   wire axi_dma_conv_M_AXI_S2MM_WREADY;
-  wire [7:0]axi_dma_conv_M_AXI_S2MM_WSTRB;
+  wire [3:0]axi_dma_conv_M_AXI_S2MM_WSTRB;
   wire axi_dma_conv_M_AXI_S2MM_WVALID;
   wire [31:0]axi_smc_1_M00_AXI_AWADDR;
   wire [1:0]axi_smc_1_M00_AXI_AWBURST;
@@ -181,15 +181,18 @@ module dma_block_0_imp_N8YKXF
   wire [1:0]axi_smc_M00_AXI_RRESP;
   wire axi_smc_M00_AXI_RVALID;
   wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
-  wire [7:0]axis_data_fifo_0_M_AXIS_TKEEP;
   wire axis_data_fifo_0_M_AXIS_TLAST;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [63:0]axis_data_fifo_1_M_AXIS_TDATA;
-  wire [7:0]axis_data_fifo_1_M_AXIS_TKEEP;
+  wire [31:0]axis_data_fifo_1_M_AXIS_TDATA;
   wire axis_data_fifo_1_M_AXIS_TLAST;
   wire axis_data_fifo_1_M_AXIS_TREADY;
   wire axis_data_fifo_1_M_AXIS_TVALID;
+  wire [31:0]axisadd_0_M00_AXIS_TDATA;
+  wire axisadd_0_M00_AXIS_TLAST;
+  wire axisadd_0_M00_AXIS_TREADY;
+  wire [3:0]axisadd_0_M00_AXIS_TSTRB;
+  wire axisadd_0_M00_AXIS_TVALID;
   wire processing_system7_0_FCLK_CLK0;
   wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
   wire ps7_0_axi_periph_M00_AXI_ARREADY;
@@ -316,7 +319,7 @@ module dma_block_0_imp_N8YKXF
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
         .s_axis_s2mm_tdata(axis_data_fifo_1_M_AXIS_TDATA),
-        .s_axis_s2mm_tkeep(axis_data_fifo_1_M_AXIS_TKEEP),
+        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
         .s_axis_s2mm_tlast(axis_data_fifo_1_M_AXIS_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_1_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_1_M_AXIS_TVALID));
@@ -394,7 +397,6 @@ module dma_block_0_imp_N8YKXF
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   zynq_axis_data_fifo_0_0 axis_data_fifo_0
        (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .m_axis_tkeep(axis_data_fifo_0_M_AXIS_TKEEP),
         .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
@@ -407,17 +409,44 @@ module dma_block_0_imp_N8YKXF
         .s_axis_tvalid(axi_dma_conv_M_AXIS_MM2S_TVALID));
   zynq_axis_data_fifo_1_0 axis_data_fifo_1
        (.m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
-        .m_axis_tkeep(axis_data_fifo_1_M_AXIS_TKEEP),
         .m_axis_tlast(axis_data_fifo_1_M_AXIS_TLAST),
         .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
         .s_axis_aclk(processing_system7_0_FCLK_CLK0),
         .s_axis_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .s_axis_tkeep(axis_data_fifo_0_M_AXIS_TKEEP),
-        .s_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .s_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .s_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+        .s_axis_tdata(axisadd_0_M00_AXIS_TDATA),
+        .s_axis_tlast(axisadd_0_M00_AXIS_TLAST),
+        .s_axis_tready(axisadd_0_M00_AXIS_TREADY),
+        .s_axis_tstrb(axisadd_0_M00_AXIS_TSTRB),
+        .s_axis_tvalid(axisadd_0_M00_AXIS_TVALID));
+  zynq_axisadd_0_1 axisadd_0
+       (.m00_axis_aclk(processing_system7_0_FCLK_CLK0),
+        .m00_axis_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .m00_axis_tdata(axisadd_0_M00_AXIS_TDATA),
+        .m00_axis_tlast(axisadd_0_M00_AXIS_TLAST),
+        .m00_axis_tready(axisadd_0_M00_AXIS_TREADY),
+        .m00_axis_tstrb(axisadd_0_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(axisadd_0_M00_AXIS_TVALID),
+        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s00_axi_araddr({1'b0,1'b0,1'b0,1'b0}),
+        .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s00_axi_arprot({1'b0,1'b0,1'b0}),
+        .s00_axi_arvalid(1'b0),
+        .s00_axi_awaddr({1'b0,1'b0,1'b0,1'b0}),
+        .s00_axi_awprot({1'b0,1'b0,1'b0}),
+        .s00_axi_awvalid(1'b0),
+        .s00_axi_bready(1'b0),
+        .s00_axi_rready(1'b0),
+        .s00_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s00_axi_wstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s00_axi_wvalid(1'b0),
+        .s00_axis_aclk(processing_system7_0_FCLK_CLK0),
+        .s00_axis_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s00_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA[31:0]),
+        .s00_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
+        .s00_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
+        .s00_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s00_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
 endmodule
 
 module s00_couplers_imp_15A5WQ8
@@ -710,7 +739,7 @@ module s00_couplers_imp_15A5WQ8
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "zynq,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zynq,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=3,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "zynq.hwdef" *) 
+(* CORE_GENERATION_INFO = "zynq,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zynq,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=3,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "zynq.hwdef" *) 
 module zynq
    (DDR_addr,
     DDR_ba,

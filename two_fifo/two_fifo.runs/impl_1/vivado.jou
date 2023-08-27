@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Aug 17 14:43:53 2023
-# Process ID: 7640
+# Start of session at: Mon Aug 21 11:48:20 2023
+# Process ID: 16016
 # Current directory: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/impl_1
 # Command line: vivado.exe -log zynq_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source zynq_wrapper.tcl -notrace
 # Log file: C:/Users/kge7/Documents/GitHub/two_fifo/two_fifo/two_fifo.runs/impl_1/zynq_wrapper.vdi

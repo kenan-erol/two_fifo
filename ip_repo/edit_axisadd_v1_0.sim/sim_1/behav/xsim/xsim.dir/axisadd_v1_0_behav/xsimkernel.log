@@ -1,0 +1,4 @@
+Running: xsim.dir/axisadd_v1_0_behav/xsimk.exe -simmode gui -wdb axisadd_v1_0_behav.wdb -simrunnum 0 -socket 54053
+Design successfully loaded
+Design Loading Memory Usage: 6416 KB (Peak: 6416 KB)
+Design Loading CPU Usage: 93 ms

@@ -28,6 +28,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_axis_data_
 # IP: bd/zynq/ip/zynq_axis_data_fifo_1_0/zynq_axis_data_fifo_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_axis_data_fifo_1_0 || ORIG_REF_NAME==zynq_axis_data_fifo_1_0} -quiet] -quiet
 
+# IP: bd/zynq/ip/zynq_axisadd_0_1/zynq_axisadd_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_axisadd_0_1 || ORIG_REF_NAME==zynq_axisadd_0_1} -quiet] -quiet
+
 # IP: bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_auto_pc_0 || ORIG_REF_NAME==zynq_auto_pc_0} -quiet] -quiet
 

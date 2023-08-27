@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Sat Aug  5 19:27:28 2023
+// Date        : Sat Aug  5 19:27:27 2023
 // Host        : caslab-wkst6 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/kenan/Documents/two_fifo/two_fifo/two_fifo.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top zynq_processing_system7_0_0 -prefix
+//               zynq_processing_system7_0_0_ zynq_processing_system7_0_0_stub.v
 // Design      : zynq_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
